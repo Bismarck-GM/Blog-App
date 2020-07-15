@@ -2,8 +2,7 @@ name: Deploy on Heroku. Naked Ruby
 
 on: 
   push:
-    branches:
-      - development
+    branches: [development]
 
 jobs:
   deploy:
@@ -12,8 +11,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: akhileshns/heroku-deploy@v3.2.6
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "naked-ruby-blog" #Must be unique in Heroku
-          heroku_email: ${{secrets.YOUR_EMAIL}}
-          branch: "dev"
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "naked-ruby-blog" #Must be unique in Heroku
+        heroku_email: ${{secrets.YOUR_EMAIL}}
+        branch: "dev"
