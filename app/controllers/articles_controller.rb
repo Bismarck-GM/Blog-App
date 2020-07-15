@@ -1,7 +1,13 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
+  before_action :require_login, except: [:index]
   def index
     @articles = Article.all
+  end
+
+  def not_authenticated
+    flash[:notice] = 'Login, naked fool'
+    redirect_to main_app.login_path
   end
 
   def show

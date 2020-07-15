@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   resources :tags
 
   root to: 'articles#index'
+  resources :authors
+
+  # resources :author_sessions, only: [ :new, :create, :destroy ]
+  post 'login' => 'author_sessions#create'
+  get 'login'  => 'author_sessions#new'
+  get 'logout' => 'author_sessions#destroy'
 end
