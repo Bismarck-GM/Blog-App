@@ -10,6 +10,10 @@
 <%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}%> <br />
 <%= link_to "edit", edit_article_path(@article) %>
 
+<% if @article.image.attached? %>
+<%= image_tag @article.image, style: "max-width: 100%" %>
+<% end %>
+
 <h3>Comments (<%= @article.comments.length %>)<h3>
 <%= render partial: 'comments/form' %>
 <%= render partial: 'articles/comment', collection: @article.comments %>
