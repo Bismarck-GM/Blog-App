@@ -1,9 +1,6 @@
 name: Deploy on Heroku. Naked Ruby
 
-on: 
-  push:
-    branches:
-      - development
+on: pull_request
 
 jobs:
   deploy:
