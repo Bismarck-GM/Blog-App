@@ -2,6 +2,10 @@
 
 This is the very first project we build with Ruby on Rails.
 
+## Blog Screenshot
+
+![](app_screenshot.png)
+
 ## Live Demo Link
 
 [Click here to try the live Version on Heroku!](https://naked-ruby-blog.herokuapp.com/)
