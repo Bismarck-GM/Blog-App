@@ -15,14 +15,6 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should create author' do
-    assert_difference('Author.count') do
-      post authors_url, params: { author: { email: @author.email, password: @author.password, password_confirmation: @author.password_confirmation, username: @author.username } }
-    end
-
-    assert_redirected_to author_url(Author.last)
-  end
-
   test 'should show author' do
     get author_url(@author)
     assert_response :success
@@ -31,11 +23,6 @@ class AuthorsControllerTest < ActionDispatch::IntegrationTest
   test 'should get edit' do
     get edit_author_url(@author)
     assert_response :success
-  end
-
-  test 'should update author' do
-    patch author_url(@author), params: { author: { email: @author.email, password: @author.password, password_confirmation: @author.password_confirmation, username: @author.username } }
-    assert_redirected_to author_url(@author)
   end
 
   test 'should destroy author' do
