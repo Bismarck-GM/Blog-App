@@ -4,7 +4,7 @@ This is the very first project we build with Ruby on Rails.
 
 ## Blog Screenshot
 
-![](app_screenshot.png)
+![](screenshot.png)
 
 ## Live Demo Link
 
