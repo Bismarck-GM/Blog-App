@@ -1,10 +1,10 @@
 name: Push Container to Heroku
-​
+
 on:
   push:
     branches:
       - development
-​
+
 jobs:
   build:
     runs-on: "ubuntu-latest"
@@ -13,5 +13,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@master
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "naked-ruby-blog2"
-          heroku_email: "hogobbl@gmail.com"
+          heroku_app_name: "naked-ruby-blog"
+          heroku_email: "geromorla@yahoo.com.ar"
